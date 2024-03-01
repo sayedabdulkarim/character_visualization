@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
 //reducers
-// import { apiSlice } from "./slices/apiSlice";
 import { apiSlice } from "./slices/apiSlice";
 import homeReducer from "./slices/home/homeSlice";
 
