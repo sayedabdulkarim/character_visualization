@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardComponent = ({ item, handleClick }) => {
+const CardComponent = ({ item }) => {
   const {
     id,
     name,
@@ -16,7 +16,7 @@ const CardComponent = ({ item, handleClick }) => {
     created,
   } = item;
   return (
-    <li onClick={() => handleClick(name, id)} className="card_container">
+    <>
       {/* left container */}
       <div className="image_container">
         <img src={image} alt={name} />
@@ -47,7 +47,7 @@ const CardComponent = ({ item, handleClick }) => {
           <strong className="heading_text">{origin?.name}</strong>
         </div>
       </div>
-    </li>
+    </>
   );
 };
 

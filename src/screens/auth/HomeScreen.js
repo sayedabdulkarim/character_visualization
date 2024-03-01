@@ -46,9 +46,15 @@ const HomeScreen = () => {
       ) : (
         <ul className="character_list_container">
           {getAllCharacters?.results?.map((item) => {
-            const { id } = item;
+            const { id, name } = item;
             return (
-              <CardComponent key={id} item={item} handleClick={handleClick} />
+              <li
+                key={id}
+                onClick={() => handleClick(name, id)}
+                className="card_container"
+              >
+                <CardComponent item={item} />
+              </li>
             );
           })}
         </ul>
