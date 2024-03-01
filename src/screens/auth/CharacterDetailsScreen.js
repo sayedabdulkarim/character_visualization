@@ -34,14 +34,15 @@ const CharacterDetailsScreen = () => {
         <div className="loader"></div>
       ) : (
         <div className="character_details_container">
-          <h1>Character Details</h1>
-          {characterById && (
-            <>
-              <CardComponent item={characterById} />
-              {/* <h2>{characterById.name}</h2> */}
-            </>
-          )}
-          <button>BACK</button>
+          <div className="character_details_wrapper">
+            <h1>Character Details</h1>
+            {characterById && (
+              <div className="card_container">
+                <CardComponent item={characterById} />
+              </div>
+            )}
+            <button>BACK</button>
+          </div>
         </div>
       )}
     </div>
