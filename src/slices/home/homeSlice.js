@@ -19,6 +19,6 @@ const homeSlice = createSlice({
   },
 });
 
-export const { setCredentials, logOutUser, setUsersList } = homeSlice.actions;
+export const { setCharactersList, setSelectedCharacter } = homeSlice.actions;
 
 export default homeSlice.reducer;
