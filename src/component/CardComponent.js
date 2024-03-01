@@ -1,15 +1,21 @@
 import React from "react";
 
-const CardComponent = () => {
-  return (
-    <div>
-      <h1>CardComponent</h1>
-      <h1>CardComponent</h1>
-      <h1>CardComponent</h1>
-      <h1>CardComponent</h1>
-      <h1>CardComponent</h1>
-    </div>
-  );
+const CardComponent = ({ item, handleClick }) => {
+  const {
+    id,
+    name,
+    status,
+    species,
+    type,
+    gender,
+    origin,
+    location,
+    image,
+    episode,
+    url,
+    created,
+  } = item;
+  return <li onClick={() => handleClick(name, id)}>{name}</li>;
 };
 
 export default CardComponent;

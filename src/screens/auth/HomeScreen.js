@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useGetAllCharactersQuery } from "../../slices/home/homeApiSlice";
 import { setCharactersList } from "../../slices/home/homeSlice";
 import ErrorComponent from "../../component/ErrorComponent";
+import CardComponent from "../../component/CardComponent";
 
 const HomeScreen = () => {
   //misc
@@ -45,28 +46,9 @@ const HomeScreen = () => {
       ) : (
         <ul className="character_list_container">
           {getAllCharacters?.results?.map((item) => {
-            const {
-              id,
-              name,
-              status,
-              species,
-              type,
-              gender,
-              origin,
-              location,
-              image,
-              episode,
-              url,
-              created,
-            } = item;
+            const { id } = item;
             return (
-              <li
-                key={id}
-                // style={{ border: "1px solid red", margin: 20 }}
-                onClick={() => handleClick(name, id)}
-              >
-                {name}
-              </li>
+              <CardComponent key={id} item={item} handleClick={handleClick} />
             );
           })}
         </ul>
