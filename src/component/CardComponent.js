@@ -24,22 +24,31 @@ const CardComponent = ({ item, handleClick }) => {
       {/* right container */}
       <div className="content_container">
         <div className="details_section">
-          <strong className="heading_text">
+          <strong className="externalLink__ExternalLink-sc-1lixk38-0 ffGNdR heading_text">
             <h2>Crystal Dealer</h2>
           </strong>
           <span className="status">
-            <span className="status__icon"></span> {status} - {species}
+            <span
+              className={`${
+                status === "Alive" ? "status__icon_alive" : "status__icon_dead"
+              }`}
+            ></span>{" "}
+            {status} - {species}
           </span>
         </div>
 
         <div className="details_section">
           <span className="text-gray">Last known location:</span>
-          <strong className="heading_text">{location?.name}</strong>
+          <strong className="externalLink__ExternalLink-sc-1lixk38-0 ffGNdR heading_text">
+            {location?.name}
+          </strong>
         </div>
 
         <div className="details_section">
           <span className="text-gray">First seen in:</span>
-          <strong className="heading_text">{origin?.name}</strong>
+          <strong className="externalLink__ExternalLink-sc-1lixk38-0 ffGNdR heading_text">
+            {origin?.name}
+          </strong>
         </div>
       </div>
     </li>
