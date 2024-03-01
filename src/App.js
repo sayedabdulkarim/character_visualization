@@ -1,23 +1,7 @@
-import React from "react";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
-  return (
-    <div className="hello">
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-      <h1>App</h1>
-    </div>
-  );
+  return <Outlet />;
 };
 
 export default App;
