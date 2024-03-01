@@ -1,20 +1,7 @@
 import React from "react";
 
 const CardComponent = ({ item }) => {
-  const {
-    id,
-    name,
-    status,
-    species,
-    type,
-    gender,
-    origin,
-    location,
-    image,
-    episode,
-    url,
-    created,
-  } = item;
+  const { name, status, species, origin, location, image } = item;
   return (
     <>
       {/* left container */}

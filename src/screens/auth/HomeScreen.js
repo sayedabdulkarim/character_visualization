@@ -27,15 +27,9 @@ const HomeScreen = () => {
   //async
   useEffect(() => {
     if (getAllCharacters) {
-      console.log({ getAllCharacters });
       dispatch(setCharactersList(getAllCharacters));
     }
   }, [getAllCharacters, dispatch]);
-
-  console.log({
-    getAllCharactersError,
-    getAllCharacters,
-  });
 
   return (
     <div>

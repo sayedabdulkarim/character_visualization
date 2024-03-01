@@ -5,7 +5,7 @@ const USERS_URL = "api/character";
 export const homeApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getAllCharacters: builder.query({
-      query: (id) => ({
+      query: () => ({
         url: `${USERS_URL}`,
       }),
     }),

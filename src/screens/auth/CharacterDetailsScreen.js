@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useGetCharacterByIdQuery } from "../../slices/home/homeApiSlice";
 import { setSelectedCharacter } from "../../slices/home/homeSlice";
 import ErrorComponent from "../../component/ErrorComponent";
@@ -10,6 +10,7 @@ const CharacterDetailsScreen = () => {
   //misc
   const dispatch = useDispatch();
   const { id } = useParams();
+  const navigate = useNavigate();
 
   // queries n mutation
   const {
@@ -18,10 +19,14 @@ const CharacterDetailsScreen = () => {
     isLoading: isLoadingCharacterById,
   } = useGetCharacterByIdQuery(id);
 
+  //func
+  const handleBackClick = () => {
+    navigate(-1);
+  };
+
   //async
   useEffect(() => {
     if (characterById) {
-      console.log({ characterById });
       dispatch(setSelectedCharacter(characterById));
     }
   }, [characterById, dispatch]);
@@ -41,7 +46,7 @@ const CharacterDetailsScreen = () => {
                 <CardComponent item={characterById} />
               </div>
             )}
-            <button>BACK</button>
+            <button onClick={() => handleBackClick()}>BACK</button>
           </div>
         </div>
       )}
