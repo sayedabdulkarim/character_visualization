@@ -23,7 +23,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 20px;
-    li {
+    .card_container {
         box-sizing: border-box; 
         width: calc(25% - 40px);
         border: 1px solid green;
@@ -38,5 +38,26 @@
           width: 100%; 
           background-color: yellow;
         }
+
+        //left container
+        .image_container {
+            img {}
+        }
+
+        //right container
+        .content_container {
+            .details_section {
+
+                .text-gray {}
+
+                .heading_text{
+                    h2 {}
+                }
+                .status {
+                    .status__icon {}
+                }
+            }
+        }
+
     }
   }
