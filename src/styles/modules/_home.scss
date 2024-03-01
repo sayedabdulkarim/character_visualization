@@ -16,3 +16,27 @@
     animation: l1 1s infinite;
   }
   @keyframes l1 {to{transform: rotate(.5turn)}}
+
+  //
+  .character_list_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    li {
+        box-sizing: border-box; 
+        width: calc(25% - 40px);
+        border: 1px solid green;
+        margin: 20px; 
+        
+        @media only screen and (max-width: $lg) {
+          width: calc(50% - 40px); 
+          background-color: red;
+        }
+        
+        @media only screen and (max-width: $md) {
+          width: 100%; 
+          background-color: yellow;
+        }
+    }
+  }

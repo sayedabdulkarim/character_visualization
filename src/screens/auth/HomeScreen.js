@@ -43,7 +43,7 @@ const HomeScreen = () => {
       {isLoadingGetAllCharacters ? (
         <div className="loader"></div>
       ) : (
-        <ul>
+        <ul className="character_list_container">
           {getAllCharacters?.results?.map((item) => {
             const {
               id,
@@ -62,7 +62,7 @@ const HomeScreen = () => {
             return (
               <li
                 key={id}
-                style={{ border: "1px solid red", margin: 20 }}
+                // style={{ border: "1px solid red", margin: 20 }}
                 onClick={() => handleClick(name, id)}
               >
                 {name}
