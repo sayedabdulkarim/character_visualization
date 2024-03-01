@@ -31,8 +31,9 @@
     .card_container {
         box-sizing: border-box;
         width: calc(25% - 40px);
-        border: 1px solid green;
+        // border: 1px solid green;
         margin: 20px;
+        cursor: pointer;
 
         ///
         display: flex;
