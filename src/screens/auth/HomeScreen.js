@@ -14,7 +14,6 @@ const HomeScreen = () => {
   // queries n mutation
   const {
     data: getAllCharacters,
-    refetch: refetchGetAllCharacters,
     error: getAllCharactersError,
     isLoading: isLoadingGetAllCharacters,
   } = useGetAllCharactersQuery();
