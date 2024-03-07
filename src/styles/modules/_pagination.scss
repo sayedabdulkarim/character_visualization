@@ -15,6 +15,33 @@
         width: 30%;
         margin: 0 auto;
     
+        .button_rounded {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            color: white;
+            background: orange;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .button-disabled {
+            cursor: no-drop;
+            background-color: #eee;
+            color: black;
+        }
+
+        .pagination-item  {
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
     }
 
 }

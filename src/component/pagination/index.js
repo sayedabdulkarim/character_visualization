@@ -35,15 +35,15 @@ const PaginationComp = (props) => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul className={"pagination-container border rounded-md"}>
+    <ul className={"pagination-container"}>
       <button
-        className={` text-gray-800 focus:ring-4 rounded-lg text-base text-center px-2 ${
+        className={`button_rounded ${
           selectedPage === 1 ? "button-disabled" : ""
         }`}
         onClick={(_) => onPrevious()}
         disabled={selectedPage === 1 ? true : false}
       >
-        Previous
+        Prev
       </button>
       {paginationRange.map((pageNumber) => {
         if (pageNumber === DOTS) {
@@ -66,7 +66,7 @@ const PaginationComp = (props) => {
         );
       })}
       <button
-        className={`text-gray-800 focus:ring-4 rounded-lg text-base text-center px-2 ${
+        className={`button_rounded ${
           selectedPage === totalPage ? "button-disabled" : ""
         }`}
         onClick={(_) => onNext()}

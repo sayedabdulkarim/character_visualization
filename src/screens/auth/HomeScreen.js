@@ -59,7 +59,7 @@ const HomeScreen = () => {
           </ul>
           <div className="pagination-bar">
             <PaginationComp
-              className=" w-25 mb-0 px-3"
+              className=""
               currentPage={currentPage}
               totalCount={data ? data.info.count : 0}
               pageSize={pageSize}
