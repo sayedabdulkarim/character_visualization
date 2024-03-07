@@ -4,6 +4,9 @@
     background: transparent;
     top: 15px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .pagination-container{
         display: flex;
         backdrop-filter: blur(4px);
@@ -11,9 +14,9 @@
         background: hsla(0, 0%, 100%, .212);
         border: 1px solid #fff;
         border-radius: 0.75rem;
-        padding: 0 20px;
-        width: 30%;
-        margin: 0 auto;
+        padding: 10px 20px;
+        // width: 40%;
+        // margin: 0 auto;
     
         .button_rounded {
             height: 50px;
