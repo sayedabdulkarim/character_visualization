@@ -21,6 +21,12 @@ const HomeScreen = () => {
     isLoading: isLoadingGetAllCharacters,
   } = useGetAllCharactersQuery();
 
+  const {
+    data: getCharactersByPage,
+    error: getCharactersByPageError,
+    isLoading: isLoadinggetCharactersByPage,
+  } = useGetCharactersByPageQuery(2);
+
   //func
   const handleClick = (name, id) => {
     navigate(`/characterdetails/${name}/${id}`);
@@ -32,6 +38,13 @@ const HomeScreen = () => {
       dispatch(setCharactersList(getAllCharacters));
     }
   }, [getAllCharacters, dispatch]);
+
+  console.log(
+    {
+      getCharactersByPage,
+    },
+    " getCharactersByPagegetCharactersByPage"
+  );
 
   return (
     <div>
