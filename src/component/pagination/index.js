@@ -8,8 +8,6 @@ const PaginationComp = (props) => {
     siblingCount = 1,
     currentPage,
     pageSize,
-    className,
-    //
     selectedPage,
     totalPage,
   } = props;
@@ -33,7 +31,7 @@ const PaginationComp = (props) => {
     onPageChange(currentPage - 1, "prev");
   };
 
-  let lastPage = paginationRange[paginationRange.length - 1];
+  //   let lastPage = paginationRange[paginationRange.length - 1];
   return (
     <ul className={"pagination-container"}>
       <button
