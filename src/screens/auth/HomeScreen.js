@@ -32,7 +32,6 @@ const HomeScreen = () => {
     }
   }, [data, dispatch]);
 
-  console.log(isLoading, "lllllllllllllllllllllll");
   return (
     <div>
       <ErrorComponent error={error} />

@@ -45,9 +45,13 @@ const PaginationComp = (props) => {
       >
         Prev
       </button>
-      {paginationRange.map((pageNumber) => {
+      {paginationRange.map((pageNumber, idx) => {
         if (pageNumber === DOTS) {
-          return <li className="pagination-item dots">&#8230;</li>;
+          return (
+            <li className="pagination-item dots" key={`dots-${idx}`}>
+              &#8230;
+            </li>
+          );
         }
 
         return (
