@@ -1,7 +1,7 @@
 import React from "react";
 
-const CardComponent = ({ item }) => {
-  const { name, status, species, origin, location, image } = item;
+const CardComponent = ({ item, handleClick, isView }) => {
+  const { id, name, status, species, origin, location, image } = item;
   return (
     <>
       {/* left container */}
@@ -33,6 +33,11 @@ const CardComponent = ({ item }) => {
           <span className="text-gray">First seen in:</span>
           <strong className="heading_text">{origin?.name}</strong>
         </div>
+        {isView && (
+          <button className="view_button" onClick={() => handleClick(name, id)}>
+            View
+          </button>
+        )}
       </div>
     </>
   );
