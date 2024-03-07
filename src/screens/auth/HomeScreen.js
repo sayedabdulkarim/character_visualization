@@ -57,15 +57,17 @@ const HomeScreen = () => {
               );
             })}
           </ul>
-          <PaginationComp
-            className="pagination-bar w-25 mb-0 px-3"
-            currentPage={currentPage}
-            totalCount={data ? data.info.count : 0}
-            pageSize={pageSize}
-            onPageChange={handlePageChange}
-            selectedPage={currentPage}
-            totalPage={totalPage}
-          />
+          <div className="pagination-bar">
+            <PaginationComp
+              className=" w-25 mb-0 px-3"
+              currentPage={currentPage}
+              totalCount={data ? data.info.count : 0}
+              pageSize={pageSize}
+              onPageChange={handlePageChange}
+              selectedPage={currentPage}
+              totalPage={totalPage}
+            />
+          </div>
         </>
       )}
     </div>

@@ -1,0 +1,20 @@
+.pagination-bar {
+    left: 0;
+    position: fixed;
+    background: transparent;
+    top: 15px;
+    width: 100%;
+    .pagination-container{
+        display: flex;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        background: hsla(0, 0%, 100%, .212);
+        border: 1px solid #fff;
+        border-radius: 0.75rem;
+        padding: 0 20px;
+        width: 30%;
+        margin: 0 auto;
+    
+    }
+
+}
