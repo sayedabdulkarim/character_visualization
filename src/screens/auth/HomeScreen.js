@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { useGetAllCharactersQuery } from "../../slices/home/homeApiSlice";
+import {
+  useGetAllCharactersQuery,
+  useGetCharactersByPageQuery,
+} from "../../slices/home/homeApiSlice";
 import { setCharactersList } from "../../slices/home/homeSlice";
 import ErrorComponent from "../../component/ErrorComponent";
 import CardComponent from "../../component/CardComponent";

@@ -14,8 +14,16 @@ export const homeApiSlice = apiSlice.injectEndpoints({
         url: `${USERS_URL}/${id}`,
       }),
     }),
+    getCharactersByPage: builder.query({
+      query: (pageNo) => ({
+        url: `${USERS_URL}/?page=${pageNo}`,
+      }),
+    }),
   }),
 });
 
-export const { useGetAllCharactersQuery, useGetCharacterByIdQuery } =
-  homeApiSlice;
+export const {
+  useGetAllCharactersQuery,
+  useGetCharacterByIdQuery,
+  useGetCharactersByPageQuery,
+} = homeApiSlice;
